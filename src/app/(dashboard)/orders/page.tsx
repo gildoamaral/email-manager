@@ -104,7 +104,7 @@ export default function OrdersPage() {
         <div className="flex items-center gap-2">
           <Filter className="h-4 w-4 text-muted-foreground" />
           <Select value={statusFilter} onValueChange={(value) => setStatusFilter(value as OrderStatus | 'all')}>
-            <SelectTrigger className="w-full sm:w-[180px]">
+            <SelectTrigger className="w-full sm:w-45">
               <SelectValue placeholder="Filtrar por status" />
             </SelectTrigger>
             <SelectContent>
@@ -130,7 +130,7 @@ export default function OrdersPage() {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead className="w-[90px] sm:w-[100px]">ID</TableHead>
+                  <TableHead className="w-22.5 sm:w-25">ID</TableHead>
                   <TableHead className="hidden md:table-cell">
                     <Button 
                       variant="ghost" 
@@ -153,7 +153,7 @@ export default function OrdersPage() {
                       <SortIcon field="amount" sortField={sortField} sortOrder={sortOrder} />
                     </Button>
                   </TableHead>
-                  <TableHead className="text-right w-[70px]">Ações</TableHead>
+                  <TableHead className="text-right w-17.5">Ações</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>

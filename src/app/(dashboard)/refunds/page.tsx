@@ -60,7 +60,7 @@ export default function RefundsPage() {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead className="w-[120px]">Refund ID</TableHead>
+                  <TableHead className="w-30">Refund ID</TableHead>
                   <TableHead>Data</TableHead>
                   <TableHead>Pedido Original</TableHead>
                   <TableHead>Cliente</TableHead>

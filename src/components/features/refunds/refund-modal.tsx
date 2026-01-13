@@ -84,7 +84,7 @@ export function RefundModal({ order }: RefundModalProps) {
       <DialogTrigger asChild>
         <Button variant="destructive">Solicitar Refund</Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[500px]">
+      <DialogContent className="sm:max-w-125">
         <DialogHeader>
           <DialogTitle>Solicitar Reembolso</DialogTitle>
           <DialogDescription>
@@ -129,7 +129,7 @@ export function RefundModal({ order }: RefundModalProps) {
                   <div className="mb-4">
                     <FormLabel className="text-base">Itens a reembolsar</FormLabel>
                   </div>
-                  <div className="space-y-2 border p-3 rounded-md max-h-[150px] overflow-y-auto">
+                  <div className="space-y-2 border p-3 rounded-md max-h-37.5 overflow-y-auto">
                     {order.items.map((item) => (
                       <FormField
                         key={item}
