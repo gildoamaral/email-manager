@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Inbox, ShoppingBag, RotateCcw, Settings, Package2 } from "lucide-react";
+import { Inbox, ShoppingBag, RotateCcw, Settings, Package2, LayoutDashboard } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const menuItems = [
+  { href: "/", label: "Dashboard", icon: LayoutDashboard },
   { href: "/inbox", label: "Inbox", icon: Inbox },
   { href: "/orders", label: "Pedidos", icon: ShoppingBag },
   { href: "/refunds", label: "Refunds", icon: RotateCcw },
@@ -26,8 +27,10 @@ export function AppSidebar() {
       <nav className="grid items-start px-2 text-sm font-medium lg:px-4 mt-4">
         {menuItems.map((item) => {
           const Icon = item.icon;
-          // Verifica se a rota atual começa com o href do item (para manter ativo em sub-rotas)
-          const isActive = pathname.startsWith(item.href);
+          // Verifica se a rota atual é exatamente "/" para Dashboard, ou começa com o href para outras
+          const isActive = item.href === "/" 
+            ? pathname === "/" 
+            : pathname.startsWith(item.href);
 
           return (
             <Link

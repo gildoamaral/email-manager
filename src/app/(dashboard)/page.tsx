@@ -27,13 +27,13 @@ export default function DashboardPage() {
     .slice(0, 5);
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-4 md:gap-6">
       <div className="flex items-center">
-        <h1 className="text-lg font-semibold md:text-2xl">Dashboard</h1>
+        <h1 className="text-xl font-semibold md:text-2xl">Dashboard</h1>
       </div>
 
       {/* Cards de Resumo (KPIs) */}
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
         
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -61,7 +61,7 @@ export default function DashboardPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="sm:col-span-2 md:col-span-1">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total de Pedidos</CardTitle>
             <ShoppingBag className="h-4 w-4 text-muted-foreground" />
@@ -79,38 +79,51 @@ export default function DashboardPage() {
       <div className="grid gap-4">
         <Card>
           <CardHeader>
-            <CardTitle>Pedidos Recentes</CardTitle>
+            <CardTitle className="text-base md:text-lg">Pedidos Recentes</CardTitle>
           </CardHeader>
-          <CardContent>
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Cliente</TableHead>
-                  <TableHead>Status</TableHead>
-                  <TableHead className="text-right">Valor</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {recentOrders.map((order) => (
-                  <TableRow key={order.id}>
-                    <TableCell>
-                      <div className="font-medium">{order.customerName}</div>
-                      <div className="text-sm text-muted-foreground hidden md:inline">
-                        {order.customerEmail}
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      <Badge variant={order.status === 'delivered' ? 'default' : 'secondary'}>
-                        {order.status}
-                      </Badge>
-                    </TableCell>
-                    <TableCell className="text-right">
-                      {order.currency} {order.amount.toFixed(2)}
-                    </TableCell>
+          <CardContent className="p-0 sm:p-6">
+            <div className="overflow-x-auto">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Cliente</TableHead>
+                    <TableHead className="hidden sm:table-cell">Status</TableHead>
+                    <TableHead className="text-right">Valor</TableHead>
                   </TableRow>
-                ))}
-              </TableBody>
-            </Table>
+                </TableHeader>
+                <TableBody>
+                  {recentOrders.map((order) => (
+                    <TableRow key={order.id}>
+                      <TableCell>
+                        <div className="font-medium text-sm">{order.customerName}</div>
+                        <div className="text-xs text-muted-foreground hidden md:inline">
+                          {order.customerEmail}
+                        </div>
+                      </TableCell>
+                      <TableCell className="hidden sm:table-cell">
+                        <Badge 
+                          variant={order.status === 'delivered' ? 'default' : 'secondary'}
+                          className="text-xs"
+                        >
+                          {order.status}
+                        </Badge>
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <div className="flex flex-col items-end">
+                          <span className="font-medium text-sm">{order.currency} {order.amount.toFixed(2)}</span>
+                          <Badge 
+                            variant={order.status === 'delivered' ? 'default' : 'secondary'}
+                            className="text-xs sm:hidden mt-1"
+                          >
+                            {order.status}
+                          </Badge>
+                        </div>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
           </CardContent>
         </Card>
       </div>
