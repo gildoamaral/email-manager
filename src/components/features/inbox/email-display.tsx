@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
 import { Email } from "@/types";
 import { Separator } from "@/components/ui/separator";
@@ -17,6 +18,13 @@ interface EmailDisplayProps {
 export function EmailDisplay({ email, onBack }: EmailDisplayProps) {
   const { markEmailAsRead } = useStore();
 
+  // Efeito ao carregar o e-mail: Marcar como lido
+  useEffect(() => {
+    if (email && email.status === "new") {
+      markEmailAsRead(email.id);
+    }
+  }, [email, markEmailAsRead]);
+
   if (!email) {
     return (
       <div className="p-8 text-center text-muted-foreground">
@@ -25,16 +33,11 @@ export function EmailDisplay({ email, onBack }: EmailDisplayProps) {
     );
   }
 
-  // Efeito ao carregar o e-mail: Marcar como lido
-  if (email.status === "new") {
-    markEmailAsRead(email.id);
-  }
-
   return (
-    <div className="flex h-full flex-col">
+    <div className="flex h-full flex-col overflow-hidden">
       {/* Botão Voltar (apenas mobile) */}
       {onBack && (
-        <div className="md:hidden p-2 border-b">
+        <div className="md:hidden p-2 border-b flex-shrink-0">
           <Button 
             variant="ghost" 
             size="sm" 
@@ -46,10 +49,14 @@ export function EmailDisplay({ email, onBack }: EmailDisplayProps) {
           </Button>
         </div>
       )}
-      <EmailHeader email={email} />
+      <div className="flex-shrink-0">
+        <EmailHeader email={email} />
+      </div>
       <EmailThread email={email} />
-      <Separator />
-      <EmailReplyEditor email={email} />
+      <Separator className="flex-shrink-0" />
+      <div className="flex-shrink-0">
+        <EmailReplyEditor email={email} />
+      </div>
     </div>
   );
 }

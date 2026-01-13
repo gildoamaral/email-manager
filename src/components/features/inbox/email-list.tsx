@@ -13,11 +13,11 @@ interface EmailListProps {
 
 export function EmailList({ items, selectedId, onSelect }: EmailListProps) {
   return (
-    <div className="w-full max-w-xs border-r bg-background flex flex-col h-[calc(100vh-120px)]">
-      <div className="p-4 border-b font-semibold text-sm text-muted-foreground">
+    <div className="w-full h-full flex flex-col">
+      <div className="p-4 border-b font-semibold text-sm text-muted-foreground shrink-0">
         Caixa de Entrada ({items.length})
       </div>
-      <div className="flex-1 overflow-auto "> 
+      <div className="flex-1 overflow-y-auto"> 
         <div className="flex flex-col gap-2 p-4">
           {items.map((item) => (
             <button

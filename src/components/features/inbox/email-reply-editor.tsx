@@ -49,7 +49,7 @@ export function EmailReplyEditor({ email }: EmailReplyEditorProps) {
     <div className="p-4 bg-background">
       <div className="grid gap-4">
         <Textarea
-          className="p-4 min-h-[100px]"
+          className="p-4 min-h-25"
           placeholder="Digite sua resposta em português..."
           value={replyText}
           onChange={(e) => {

@@ -34,8 +34,8 @@ export default function InboxPage() {
       
       {/* Coluna da Esquerda: Lista */}
       <div className={cn(
-        "w-full md:w-[320px] border-b md:border-b-0 md:border-r bg-muted/10",
-        isViewingEmail ? "hidden md:block" : "block"
+        "w-full md:w-[320px] border-b md:border-b-0 md:border-r bg-muted/10 overflow-hidden",
+        isViewingEmail ? "hidden md:block" : "flex flex-col"
       )}>
         <EmailList 
           items={emails} 
@@ -46,8 +46,8 @@ export default function InboxPage() {
 
       {/* Coluna da Direita: Visualização */}
       <div className={cn(
-        "flex-1 bg-background",
-        isViewingEmail ? "block" : "hidden md:block"
+        "flex-1 bg-background overflow-hidden",
+        isViewingEmail ? "flex flex-col" : "hidden md:flex md:flex-col"
       )}>
         <EmailDisplay 
           email={selectedEmail} 

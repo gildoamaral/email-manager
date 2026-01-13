@@ -35,7 +35,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 
-import { useStore } from "@/store/use-store";
 import { Order } from "@/types";
 
 // Schema de validação
@@ -53,7 +52,6 @@ interface RefundModalProps {
 
 export function RefundModal({ order }: RefundModalProps) {
   const [open, setOpen] = useState(false);
-  const { processRefund } = useStore();
 
   const form = useForm<z.infer<typeof refundSchema>>({
     resolver: zodResolver(refundSchema),
@@ -67,10 +65,7 @@ export function RefundModal({ order }: RefundModalProps) {
 
   async function onSubmit(values: z.infer<typeof refundSchema>) {
     // Simulação de delay de API
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    // Executa a ação na Store Global
-    processRefund(order.id, values.reason);
+    await new Promise((resolve) => setTimeout(resolve, 1500));
 
     toast.success(`Reembolso do pedido ${order.id} processado!`, {
       description: `Motivo: ${values.reason}`,

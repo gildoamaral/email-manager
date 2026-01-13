@@ -98,8 +98,8 @@ export default function RefundsPage() {
                         {getStatusLabel(order.refund!.status)}
                       </Badge>
                     </TableCell>
-                    <TableCell className="text-right font-medium text-red-600 dark:text-red-400">
-                      - {order.currency} {order.refund!.amount.toFixed(2)}
+                    <TableCell className="text-right font-medium">
+                    {order.currency} {order.refund!.amount.toFixed(2)}
                     </TableCell>
                     <TableCell className="text-right">
                       <Button

@@ -258,7 +258,7 @@
     "preview": "Vi que vocês têm um programa de pontos. Como funciona...",
     "date": "2025-10-14T17:00:00Z",
     "status": "replied",
-    "orderId": null,
+    "orderId": "ORD-7794",
     "thread": [
       {
         "id": "t18",
@@ -272,6 +272,39 @@
         "from": "support",
         "content": "Olá Roberto! Nosso programa de fidelidade funciona assim: a cada R$100 em compras você ganha 10 pontos, e cada ponto vale R$1 em desconto. O cadastro é automático ao fazer sua primeira compra!",
         "date": "2025-10-14T17:30:00Z",
+        "originalLanguage": "pt"
+      }
+    ]
+  },
+  {
+    "id": "MSG-113",
+    "senderName": "Isabela Mendes",
+    "senderEmail": "isabela.mendes@email.com",
+    "subject": "Solicitação de reembolso - Pedido ORD-7791",
+    "preview": "Recebi o conjunto mas a qualidade do tecido não corresponde...",
+    "date": "2025-10-06T10:00:00Z",
+    "status": "replied",
+    "orderId": "ORD-7791",
+    "thread": [
+      {
+        "id": "t20",
+        "from": "customer",
+        "content": "Recebi o conjunto mas a qualidade do tecido não corresponde às fotos do site. Gostaria de solicitar o reembolso completo.",
+        "date": "2025-10-06T10:00:00Z",
+        "originalLanguage": "pt"
+      },
+      {
+        "id": "t21",
+        "from": "support",
+        "content": "Olá Isabela, lamentamos muito pela experiência. Já aprovei seu reembolso de R$680,00. O valor será estornado no cartão em até 5 dias úteis.",
+        "date": "2025-10-07T14:30:00Z",
+        "originalLanguage": "pt"
+      },
+      {
+        "id": "t22",
+        "from": "customer",
+        "content": "Obrigada pela compreensão e rapidez no atendimento.",
+        "date": "2025-10-07T15:00:00Z",
         "originalLanguage": "pt"
       }
     ]

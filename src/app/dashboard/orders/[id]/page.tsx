@@ -58,7 +58,7 @@ export default function OrderDetailsPage() {
             <RefundModal order={order} />
           ) : (
             <Button variant="outline" disabled className="w-full sm:w-auto opacity-50 cursor-not-allowed">
-              Reembolso Processado
+              Já Reembolsado
             </Button>
           )}
         </div>

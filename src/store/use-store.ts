@@ -3,23 +3,18 @@ import { Email, Order, OrderStatus } from '@/types';
 import emailsData from '@/data/emails.json';
 import ordersData from '@/data/orders.json';
 
-// Definindo o formato da nossa Store
 interface AppState {
   emails: Email[];
   orders: Order[];
   
-  // Actions (Ações que modificam o estado)
   markEmailAsRead: (id: string) => void;
   addReply: (emailId: string, content: string) => void;
-  processRefund: (orderId: string, reason: string) => void;
   
-  // Getters (Para pegar dados específicos facilmente)
   getEmailsByOrder: (orderId: string) => Email[];
   getOrderById: (orderId: string) => Order | undefined;
 }
 
 export const useStore = create<AppState>((set, get) => ({
-  // Carrega os dados iniciais dos JSONs
   emails: emailsData as Email[], 
   orders: ordersData as Order[],
 
@@ -29,17 +24,18 @@ export const useStore = create<AppState>((set, get) => ({
     )
   })),
 
+  // simulado
   addReply: (emailId, content) => set((state) => ({
     emails: state.emails.map((email) => {
       if (email.id !== emailId) return email;
       
       return {
         ...email,
-        status: 'replied', // Muda status para respondido
+        status: 'replied',
         thread: [
           ...email.thread,
           {
-            id: Math.random().toString(36).substr(2, 9), // ID temporário
+            id: Math.random().toString(36).substring(2, 11),
             from: 'support',
             content,
             date: new Date().toISOString(),
@@ -48,27 +44,6 @@ export const useStore = create<AppState>((set, get) => ({
         ]
       };
     })
-  })),
-
-  processRefund: (orderId, reason) => set((state) => ({
-    orders: state.orders.map((order) => {
-      if (order.id !== orderId) return order;
-      
-      // Cria o objeto de refund
-      const refund = {
-        id: `REF-${orderId.split('-')[1]}-001`,
-        status: 'pending' as const,
-        amount: order.amount,
-        date: new Date().toISOString()
-      };
-      
-      return {
-        ...order,
-        status: 'refunded' as OrderStatus,
-        refund
-      };
-    })
-    // Opcional: Poderíamos adicionar um log ou e-mail automático aqui também
   })),
 
   getEmailsByOrder: (orderId) => {

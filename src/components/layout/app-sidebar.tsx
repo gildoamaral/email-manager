@@ -21,7 +21,7 @@ export function AppSidebar() {
       <div className="flex h-14 items-center border-b px-4 lg:h-15 lg:px-6">
         <Link href="/dashboard" className="flex items-center gap-2 font-semibold">
           <Package2 className="h-6 w-6" />
-          <span>SaaS Manager</span>
+          <span>Mail Manager</span>
         </Link>
       </div>
       <nav className="grid items-start px-2 text-sm font-medium lg:px-4 mt-4">

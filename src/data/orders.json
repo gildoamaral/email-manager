@@ -4,7 +4,7 @@
     "customerName": "Alice Ferreira",
     "customerEmail": "alice@exemplo.com",
     "customerPhone": "+55 11 98765-4321",
-    "amount": 250.00,
+    "amount": 250.0,
     "currency": "BRL",
     "status": "delivered",
     "date": "2025-10-12T10:30:00Z",
@@ -13,7 +13,7 @@
       "id": "PAY-7782-001",
       "method": "Cartão de Crédito",
       "installments": 2,
-      "amount": 250.00
+      "amount": 250.0
     },
     "address": {
       "street": "Rua das Flores",
@@ -31,7 +31,7 @@
     "customerName": "Bruno Silva",
     "customerEmail": "bruno@exemplo.com",
     "customerPhone": "+55 21 99876-5432",
-    "amount": 89.90,
+    "amount": 89.9,
     "currency": "BRL",
     "status": "pending",
     "date": "2025-10-13T14:15:00Z",
@@ -40,7 +40,7 @@
       "id": "PAY-7783-001",
       "method": "Pix",
       "installments": 1,
-      "amount": 89.90
+      "amount": 89.9
     },
     "address": {
       "street": "Avenida Atlântica",
@@ -57,7 +57,7 @@
     "customerName": "Carla Diaz",
     "customerEmail": "carla@exemplo.com",
     "customerPhone": "+55 11 97654-3210",
-    "amount": 1200.00,
+    "amount": 1200.0,
     "currency": "BRL",
     "status": "refunded",
     "date": "2025-10-10T09:00:00Z",
@@ -66,7 +66,7 @@
       "id": "PAY-7784-001",
       "method": "Cartão de Crédito",
       "installments": 3,
-      "amount": 1200.00
+      "amount": 1200.0
     },
     "address": {
       "street": "Rua Augusta",
@@ -81,7 +81,7 @@
     "refund": {
       "id": "REF-7784-001",
       "status": "approved",
-      "amount": 1200.00,
+      "amount": 1200.0,
       "date": "2025-10-11T15:45:00Z"
     }
   },
@@ -90,7 +90,7 @@
     "customerName": "Daniel Santos",
     "customerEmail": "daniel@exemplo.com",
     "customerPhone": "+55 31 98888-7777",
-    "amount": 450.50,
+    "amount": 450.5,
     "currency": "BRL",
     "status": "shipped",
     "date": "2025-10-15T16:20:00Z",
@@ -99,7 +99,7 @@
       "id": "PAY-7785-001",
       "method": "Cartão de Crédito",
       "installments": 4,
-      "amount": 450.50
+      "amount": 450.5
     },
     "address": {
       "street": "Avenida do Contorno",
@@ -110,10 +110,10 @@
       "zipCode": "30110-017",
       "country": "Brasil"
     },
-        "refund": {
+    "refund": {
       "id": "REF-7785-001",
       "status": "pending",
-      "amount": 450.50,
+      "amount": 450.5,
       "date": "2025-10-16T10:00:00Z"
     }
   },
@@ -122,7 +122,7 @@
     "customerName": "Elena Costa",
     "customerEmail": "elena@exemplo.com",
     "customerPhone": "+55 51 99999-1111",
-    "amount": 180.00,
+    "amount": 180.0,
     "currency": "BRL",
     "status": "delivered",
     "date": "2025-10-08T11:45:00Z",
@@ -131,7 +131,7 @@
       "id": "PAY-7786-001",
       "method": "Boleto",
       "installments": 1,
-      "amount": 180.00
+      "amount": 180.0
     },
     "address": {
       "street": "Rua dos Andradas",
@@ -148,7 +148,7 @@
     "customerName": "Fernando Lima",
     "customerEmail": "fernando@exemplo.com",
     "customerPhone": "+55 85 97777-6666",
-    "amount": 320.00,
+    "amount": 320.0,
     "currency": "BRL",
     "status": "paid",
     "date": "2025-10-14T08:30:00Z",
@@ -157,7 +157,7 @@
       "id": "PAY-7787-001",
       "method": "Pix",
       "installments": 1,
-      "amount": 320.00
+      "amount": 320.0
     },
     "address": {
       "street": "Avenida Beira Mar",
@@ -174,7 +174,7 @@
     "customerName": "Gabriela Rodrigues",
     "customerEmail": "gabriela@exemplo.com",
     "customerPhone": "+55 71 96666-5555",
-    "amount": 550.00,
+    "amount": 550.0,
     "currency": "BRL",
     "status": "cancelled",
     "date": "2025-10-11T13:00:00Z",
@@ -183,7 +183,7 @@
       "id": "PAY-7788-001",
       "method": "Cartão de Crédito",
       "installments": 5,
-      "amount": 550.00
+      "amount": 550.0
     },
     "address": {
       "street": "Rua Chile",
@@ -200,7 +200,7 @@
     "customerName": "Hugo Almeida",
     "customerEmail": "hugo@exemplo.com",
     "customerPhone": "+55 41 95555-4444",
-    "amount": 799.90,
+    "amount": 799.9,
     "currency": "BRL",
     "status": "delivered",
     "date": "2025-10-09T10:15:00Z",
@@ -209,7 +209,7 @@
       "id": "PAY-7789-001",
       "method": "Cartão de Crédito",
       "installments": 6,
-      "amount": 799.90
+      "amount": 799.9
     },
     "address": {
       "street": "Rua XV de Novembro",
@@ -219,6 +219,65 @@
       "state": "PR",
       "zipCode": "80020-310",
       "country": "Brasil"
+    }
+  },
+  {
+    "id": "ORD-7790",
+    "customerName": "Maria Oliveira",
+    "customerEmail": "maria.oliveira@email.com",
+    "customerPhone": "+55 11 94444-3333",
+    "amount": 340.0,
+    "currency": "BRL",
+    "status": "paid",
+    "date": "2025-10-16T11:30:00Z",
+    "items": ["Calça Jeans Skinny M", "Blusa Manga Longa M"],
+    "payment": {
+      "id": "PAY-7790-001",
+      "method": "Cartão de Crédito",
+      "installments": 3,
+      "amount": 340.0
+    },
+    "address": {
+      "street": "Rua Vergueiro",
+      "number": "2100",
+      "complement": "Bloco B Apto 301",
+      "neighborhood": "Vila Mariana",
+      "city": "São Paulo",
+      "state": "SP",
+      "zipCode": "04101-000",
+      "country": "Brasil"
+    }
+  },
+  {
+    "id": "ORD-7791",
+    "customerName": "Isabela Mendes",
+    "customerEmail": "isabela.mendes@email.com",
+    "customerPhone": "+55 48 93333-2222",
+    "amount": 680.0,
+    "currency": "BRL",
+    "status": "refunded",
+    "date": "2025-10-05T13:20:00Z",
+    "items": ["Conjunto de Inverno G", "Cachecol de Lã"],
+    "payment": {
+      "id": "PAY-7791-001",
+      "method": "Cartão de Crédito",
+      "installments": 4,
+      "amount": 680.0
+    },
+    "address": {
+      "street": "Avenida das Rendeiras",
+      "number": "1500",
+      "neighborhood": "Lagoa da Conceição",
+      "city": "Florianópolis",
+      "state": "SC",
+      "zipCode": "88062-000",
+      "country": "Brasil"
+    },
+    "refund": {
+      "id": "REF-7791-001",
+      "status": "approved",
+      "amount": 680.0,
+      "date": "2025-10-07T14:30:00Z"
     }
   }
 ]

@@ -46,7 +46,7 @@ export function AppHeader() {
               <SheetTitle>
                 <Link href="/dashboard" className="flex items-center gap-2 font-semibold" onClick={() => setOpen(false)}>
                   <Package2 className="h-6 w-6" />
-                  <span>SaaS Manager</span>
+                  <span>Email Manager</span>
                 </Link>
               </SheetTitle>
             </SheetHeader>
@@ -75,15 +75,19 @@ export function AppHeader() {
                 );
               })}
             </nav>
+            <div className="mt-auto pt-4">
+              <ThemeToggle />
+            </div>
           </SheetContent>
         </Sheet>
 
-        <h1 className="text-base sm:text-lg font-semibold md:text-xl">Confraria Vintage</h1>
       </div>
 
       {/* Lado Direito: Ações e Perfil */}
       <div className="flex items-center gap-2 sm:gap-4">
-        <ThemeToggle />
+        <div className="hidden sm:flex">
+          <ThemeToggle />
+        </div>
         <Separator orientation="vertical" className="h-6 hidden sm:block" />
         <div className="flex items-center gap-2">
           <span className="text-sm font-medium hidden sm:inline-block">
