@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ORD-7782",
+    "customerName": "Alice Ferreira",
+    "customerEmail": "alice@exemplo.com",
+    "amount": 250.00,
+    "currency": "BRL",
+    "status": "delivered",
+    "date": "2025-10-12T10:30:00Z",
+    "items": ["Vestido Floral M", "Cinto de Couro"]
+  },
+  {
+    "id": "ORD-7783",
+    "customerName": "Bruno Silva",
+    "customerEmail": "bruno@exemplo.com",
+    "amount": 89.90,
+    "currency": "BRL",
+    "status": "pending",
+    "date": "2025-10-13T14:15:00Z",
+    "items": ["Camiseta Básica G"]
+  },
+  {
+    "id": "ORD-7784",
+    "customerName": "Carla Diaz",
+    "customerEmail": "carla@exemplo.com",
+    "amount": 1200.00,
+    "currency": "BRL",
+    "status": "refunded",
+    "date": "2025-10-10T09:00:00Z",
+    "items": ["Casaco de Lã Premium"]
+  }
+]

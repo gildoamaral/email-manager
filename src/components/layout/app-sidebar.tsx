@@ -1,0 +1,51 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Inbox, ShoppingBag, RotateCcw, Settings, Package2 } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+const menuItems = [
+  { href: "/inbox", label: "Inbox", icon: Inbox },
+  { href: "/orders", label: "Pedidos", icon: ShoppingBag },
+  { href: "/refunds", label: "Refunds", icon: RotateCcw },
+  { href: "/settings", label: "Configurações", icon: Settings },
+];
+
+export function AppSidebar() {
+  const pathname = usePathname();
+
+  return (
+    <aside className="w-64 border-r bg-muted/40 hidden md:block min-h-screen">
+      <div className="flex h-14 items-center border-b px-4 lg:h-15 lg:px-6">
+        <Link href="/" className="flex items-center gap-2 font-semibold">
+          <Package2 className="h-6 w-6" />
+          <span>SaaS Manager</span>
+        </Link>
+      </div>
+      <nav className="grid items-start px-2 text-sm font-medium lg:px-4 mt-4">
+        {menuItems.map((item) => {
+          const Icon = item.icon;
+          // Verifica se a rota atual começa com o href do item (para manter ativo em sub-rotas)
+          const isActive = pathname.startsWith(item.href);
+
+          return (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={cn(
+                "flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:text-primary",
+                isActive
+                  ? "bg-muted text-primary"
+                  : "text-muted-foreground"
+              )}
+            >
+              <Icon className="h-4 w-4" />
+              {item.label}
+            </Link>
+          );
+        })}
+      </nav>
+    </aside>
+  );
+}

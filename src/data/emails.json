@@ -1,0 +1,66 @@
+[
+  {
+    "id": "MSG-101",
+    "senderName": "Alice Ferreira",
+    "senderEmail": "alice@exemplo.com",
+    "subject": "Produto com defeito - Pedido ORD-7782",
+    "preview": "Olá, recebi o vestido hoje mas ele veio com um rasgo na costura...",
+    "date": "2025-10-14T08:00:00Z",
+    "status": "new",
+    "orderId": "ORD-7782",
+    "thread": [
+      {
+        "id": "t1",
+        "from": "customer",
+        "content": "Olá, recebi o vestido hoje mas ele veio com um rasgo na costura lateral. Gostaria de saber como proceder para troca ou devolução. Enviei fotos em anexo.",
+        "date": "2025-10-14T08:00:00Z",
+        "originalLanguage": "pt"
+      }
+    ]
+  },
+  {
+    "id": "MSG-102",
+    "senderName": "John Smith",
+    "senderEmail": "john.smith@us-mail.com",
+    "subject": "Shipping inquiry",
+    "preview": "Hi, do you ship to the US? I really liked the collection...",
+    "date": "2025-10-14T10:30:00Z",
+    "status": "read",
+    "orderId": null,
+    "thread": [
+      {
+        "id": "t2",
+        "from": "customer",
+        "content": "Hi, do you ship to the US? I really liked the collection and wanted to buy a gift for my wife.",
+        "date": "2025-10-14T10:30:00Z",
+        "originalLanguage": "en"
+      }
+    ]
+  },
+  {
+    "id": "MSG-103",
+    "senderName": "Bruno Silva",
+    "senderEmail": "bruno@exemplo.com",
+    "subject": "Dúvida sobre pagamento",
+    "preview": "O boleto vence hoje ou amanhã? Não achei a data.",
+    "date": "2025-10-13T15:00:00Z",
+    "status": "replied",
+    "orderId": "ORD-7783",
+    "thread": [
+      {
+        "id": "t3",
+        "from": "customer",
+        "content": "O boleto vence hoje ou amanhã? Não achei a data no PDF.",
+        "date": "2025-10-13T15:00:00Z",
+        "originalLanguage": "pt"
+      },
+      {
+        "id": "t4",
+        "from": "support",
+        "content": "Olá Bruno, o vencimento é para amanhã, dia 15/10. Pode ficar tranquilo.",
+        "date": "2025-10-13T16:20:00Z",
+        "originalLanguage": "pt"
+      }
+    ]
+  }
+]
