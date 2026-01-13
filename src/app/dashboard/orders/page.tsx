@@ -206,7 +206,7 @@ export default function OrdersPage() {
                         variant="ghost" 
                         size="icon"
                         className="h-8 w-8"
-                        onClick={() => router.push(`/orders/${order.id}`)}
+                        onClick={() => router.push(`/dashboard/orders/${order.id}`)}
                       >
                         <Eye className="h-4 w-4" />
                         <span className="sr-only">Ver detalhes</span>

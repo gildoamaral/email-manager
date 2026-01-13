@@ -106,7 +106,7 @@ export default function OrderDetailsPage() {
                     <div 
                       key={email.id} 
                       className="flex flex-col p-3 border rounded-lg bg-muted/20 cursor-pointer hover:bg-muted/40 transition-colors"
-                      onClick={() => router.push('/inbox')}
+                      onClick={() => router.push('/dashboard/inbox')}
                     >
                       <div className="flex justify-between items-start mb-1 gap-2">
                         <span className="font-semibold text-xs sm:text-sm flex-1">{email.subject}</span>

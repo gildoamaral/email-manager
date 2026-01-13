@@ -18,11 +18,11 @@ import { cn } from "@/lib/utils";
 import { ThemeToggle } from './mode-toggle';
 
 const menuItems = [
-  { href: "/", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/inbox", label: "Inbox", icon: Inbox },
-  { href: "/orders", label: "Pedidos", icon: ShoppingBag },
-  { href: "/refunds", label: "Refunds", icon: RotateCcw },
-  { href: "/settings", label: "Configurações", icon: Settings },
+  { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/dashboard/inbox", label: "Inbox", icon: Inbox },
+  { href: "/dashboard/orders", label: "Pedidos", icon: ShoppingBag },
+  { href: "/dashboard/refunds", label: "Refunds", icon: RotateCcw },
+  { href: "/dashboard/settings", label: "Configurações", icon: Settings },
 ];
 
 export function AppHeader() {
@@ -44,7 +44,7 @@ export function AppHeader() {
           <SheetContent side="left" className="w-64">
             <SheetHeader>
               <SheetTitle>
-                <Link href="/" className="flex items-center gap-2 font-semibold" onClick={() => setOpen(false)}>
+                <Link href="/dashboard" className="flex items-center gap-2 font-semibold" onClick={() => setOpen(false)}>
                   <Package2 className="h-6 w-6" />
                   <span>SaaS Manager</span>
                 </Link>
@@ -53,8 +53,8 @@ export function AppHeader() {
             <nav className="grid gap-2 mt-6">
               {menuItems.map((item) => {
                 const Icon = item.icon;
-                const isActive = item.href === "/" 
-                  ? pathname === "/" 
+                const isActive = item.href === "/dashboard" 
+                  ? pathname === "/dashboard" 
                   : pathname.startsWith(item.href);
 
                 return (

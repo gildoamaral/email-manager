@@ -105,7 +105,7 @@ export default function RefundsPage() {
                       <Button
                         variant="ghost"
                         size="icon"
-                        onClick={() => router.push(`/orders/${order.id}`)}
+                        onClick={() => router.push(`/dashboard/orders/${order.id}`)}
                         title="Ver detalhes do pedido"
                       >
                         <ExternalLink className="h-4 w-4" />
