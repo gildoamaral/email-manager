@@ -62,5 +62,218 @@
         "originalLanguage": "pt"
       }
     ]
+  },
+  {
+    "id": "MSG-104",
+    "senderName": "Carla Diaz",
+    "senderEmail": "carla@exemplo.com",
+    "subject": "Solicitação de reembolso - ORD-7784",
+    "preview": "Gostaria de solicitar o reembolso do casaco. O produto não atendeu...",
+    "date": "2025-10-11T14:30:00Z",
+    "status": "replied",
+    "orderId": "ORD-7784",
+    "thread": [
+      {
+        "id": "t5",
+        "from": "customer",
+        "content": "Gostaria de solicitar o reembolso do casaco. O produto não atendeu minhas expectativas de qualidade pelo preço pago.",
+        "date": "2025-10-11T14:30:00Z",
+        "originalLanguage": "pt"
+      },
+      {
+        "id": "t6",
+        "from": "support",
+        "content": "Olá Carla, tudo bem? Lamentamos que o produto não tenha atendido suas expectativas. Já processei o reembolso e o valor será estornado em até 5 dias úteis.",
+        "date": "2025-10-11T15:45:00Z",
+        "originalLanguage": "pt"
+      },
+      {
+        "id": "t7",
+        "from": "customer",
+        "content": "Perfeito, obrigada pelo atendimento rápido!",
+        "date": "2025-10-11T16:00:00Z",
+        "originalLanguage": "pt"
+      }
+    ]
+  },
+  {
+    "id": "MSG-105",
+    "senderName": "Daniel Santos",
+    "senderEmail": "daniel@exemplo.com",
+    "subject": "Código de rastreio - Pedido ORD-7785",
+    "preview": "Bom dia! Meu pedido está com status 'enviado' mas não recebi...",
+    "date": "2025-10-16T09:15:00Z",
+    "status": "new",
+    "orderId": "ORD-7785",
+    "thread": [
+      {
+        "id": "t8",
+        "from": "customer",
+        "content": "Bom dia! Meu pedido está com status 'enviado' mas não recebi o código de rastreio. Poderiam me enviar?",
+        "date": "2025-10-16T09:15:00Z",
+        "originalLanguage": "pt"
+      }
+    ]
+  },
+  {
+    "id": "MSG-106",
+    "senderName": "Elena Costa",
+    "senderEmail": "elena@exemplo.com",
+    "subject": "Produto entregue - Muito satisfeita!",
+    "preview": "Olá! Recebi minha bolsa e carteira hoje e estou muito feliz...",
+    "date": "2025-10-09T18:20:00Z",
+    "status": "read",
+    "orderId": "ORD-7786",
+    "thread": [
+      {
+        "id": "t9",
+        "from": "customer",
+        "content": "Olá! Recebi minha bolsa e carteira hoje e estou muito feliz com a qualidade. O material é excelente e a entrega foi rápida. Parabéns pelo trabalho!",
+        "date": "2025-10-09T18:20:00Z",
+        "originalLanguage": "pt"
+      }
+    ]
+  },
+  {
+    "id": "MSG-107",
+    "senderName": "Fernando Lima",
+    "senderEmail": "fernando@exemplo.com",
+    "subject": "Troca de tamanho - ORD-7787",
+    "preview": "A camisa que comprei ficou um pouco apertada. É possível trocar...",
+    "date": "2025-10-15T11:00:00Z",
+    "status": "replied",
+    "orderId": "ORD-7787",
+    "thread": [
+      {
+        "id": "t10",
+        "from": "customer",
+        "content": "A camisa que comprei ficou um pouco apertada. É possível trocar por um tamanho G? O pedido já foi pago via Pix.",
+        "date": "2025-10-15T11:00:00Z",
+        "originalLanguage": "pt"
+      },
+      {
+        "id": "t11",
+        "from": "support",
+        "content": "Olá Fernando! Claro, podemos fazer a troca. Você pode nos enviar o produto de volta e assim que recebermos, enviaremos o tamanho G. Vou enviar as instruções por e-mail.",
+        "date": "2025-10-15T13:30:00Z",
+        "originalLanguage": "pt"
+      }
+    ]
+  },
+  {
+    "id": "MSG-108",
+    "senderName": "Gabriela Rodrigues",
+    "senderEmail": "gabriela@exemplo.com",
+    "subject": "Cancelamento de pedido - ORD-7788",
+    "preview": "Preciso cancelar meu pedido urgentemente. Comprei por engano...",
+    "date": "2025-10-11T14:00:00Z",
+    "status": "replied",
+    "orderId": "ORD-7788",
+    "thread": [
+      {
+        "id": "t12",
+        "from": "customer",
+        "content": "Preciso cancelar meu pedido urgentemente. Comprei por engano o tamanho errado e gostaria de fazer um novo pedido com o tamanho correto.",
+        "date": "2025-10-11T14:00:00Z",
+        "originalLanguage": "pt"
+      },
+      {
+        "id": "t13",
+        "from": "support",
+        "content": "Olá Gabriela! Sem problemas, já cancelei seu pedido. O estorno do valor será processado em até 7 dias úteis. Fique à vontade para fazer um novo pedido quando quiser!",
+        "date": "2025-10-11T14:45:00Z",
+        "originalLanguage": "pt"
+      },
+      {
+        "id": "t14",
+        "from": "customer",
+        "content": "Obrigada! Vou fazer o novo pedido agora mesmo.",
+        "date": "2025-10-11T15:00:00Z",
+        "originalLanguage": "pt"
+      }
+    ]
+  },
+  {
+    "id": "MSG-109",
+    "senderName": "Hugo Almeida",
+    "senderEmail": "hugo@exemplo.com",
+    "subject": "Elogio ao produto - ORD-7789",
+    "preview": "Queria parabenizar pela qualidade da jaqueta de couro...",
+    "date": "2025-10-10T16:30:00Z",
+    "status": "read",
+    "orderId": "ORD-7789",
+    "thread": [
+      {
+        "id": "t15",
+        "from": "customer",
+        "content": "Queria parabenizar pela qualidade da jaqueta de couro. O acabamento é impecável e o caimento perfeito. Valeu cada centavo! Certamente comprarei novamente.",
+        "date": "2025-10-10T16:30:00Z",
+        "originalLanguage": "pt"
+      }
+    ]
+  },
+  {
+    "id": "MSG-110",
+    "senderName": "Maria Oliveira",
+    "senderEmail": "maria.oliveira@email.com",
+    "subject": "Dúvida sobre tamanhos",
+    "preview": "Olá, tenho dúvida sobre a tabela de medidas. Uso normalmente M...",
+    "date": "2025-10-16T10:00:00Z",
+    "status": "new",
+    "orderId": null,
+    "thread": [
+      {
+        "id": "t16",
+        "from": "customer",
+        "content": "Olá, tenho dúvida sobre a tabela de medidas. Uso normalmente M em outras lojas, mas vi que suas peças têm modelagem diferenciada. Poderia me ajudar?",
+        "date": "2025-10-16T10:00:00Z",
+        "originalLanguage": "pt"
+      }
+    ]
+  },
+  {
+    "id": "MSG-111",
+    "senderName": "Sophie Martin",
+    "senderEmail": "sophie.martin@france-mail.fr",
+    "subject": "International shipping to France",
+    "preview": "Hello, I would like to know if you ship to France and what...",
+    "date": "2025-10-15T14:20:00Z",
+    "status": "new",
+    "orderId": null,
+    "thread": [
+      {
+        "id": "t17",
+        "from": "customer",
+        "content": "Hello, I would like to know if you ship to France and what are the shipping costs and estimated delivery time? I'm interested in ordering some items from your collection.",
+        "date": "2025-10-15T14:20:00Z",
+        "originalLanguage": "en"
+      }
+    ]
+  },
+  {
+    "id": "MSG-112",
+    "senderName": "Roberto Mendes",
+    "senderEmail": "roberto.mendes@email.com",
+    "subject": "Dúvida sobre programa de fidelidade",
+    "preview": "Vi que vocês têm um programa de pontos. Como funciona...",
+    "date": "2025-10-14T17:00:00Z",
+    "status": "replied",
+    "orderId": null,
+    "thread": [
+      {
+        "id": "t18",
+        "from": "customer",
+        "content": "Vi que vocês têm um programa de pontos. Como funciona e como posso me cadastrar?",
+        "date": "2025-10-14T17:00:00Z",
+        "originalLanguage": "pt"
+      },
+      {
+        "id": "t19",
+        "from": "support",
+        "content": "Olá Roberto! Nosso programa de fidelidade funciona assim: a cada R$100 em compras você ganha 10 pontos, e cada ponto vale R$1 em desconto. O cadastro é automático ao fazer sua primeira compra!",
+        "date": "2025-10-14T17:30:00Z",
+        "originalLanguage": "pt"
+      }
+    ]
   }
 ]

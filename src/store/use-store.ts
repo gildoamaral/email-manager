@@ -51,11 +51,23 @@ export const useStore = create<AppState>((set, get) => ({
   })),
 
   processRefund: (orderId, reason) => set((state) => ({
-    orders: state.orders.map((order) => 
-      order.id === orderId 
-        ? { ...order, status: 'refunded' as OrderStatus } // Atualiza status do pedido
-        : order
-    ),
+    orders: state.orders.map((order) => {
+      if (order.id !== orderId) return order;
+      
+      // Cria o objeto de refund
+      const refund = {
+        id: `REF-${orderId.split('-')[1]}-001`,
+        status: 'pending' as const,
+        amount: order.amount,
+        date: new Date().toISOString()
+      };
+      
+      return {
+        ...order,
+        status: 'refunded' as OrderStatus,
+        refund
+      };
+    })
     // Opcional: Poderíamos adicionar um log ou e-mail automático aqui também
   })),
 

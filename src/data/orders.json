@@ -3,30 +3,222 @@
     "id": "ORD-7782",
     "customerName": "Alice Ferreira",
     "customerEmail": "alice@exemplo.com",
+    "customerPhone": "+55 11 98765-4321",
     "amount": 250.00,
     "currency": "BRL",
     "status": "delivered",
     "date": "2025-10-12T10:30:00Z",
-    "items": ["Vestido Floral M", "Cinto de Couro"]
+    "items": ["Vestido Floral M", "Cinto de Couro"],
+    "payment": {
+      "id": "PAY-7782-001",
+      "method": "Cartão de Crédito",
+      "installments": 2,
+      "amount": 250.00
+    },
+    "address": {
+      "street": "Rua das Flores",
+      "number": "123",
+      "complement": "Apto 45",
+      "neighborhood": "Jardim Primavera",
+      "city": "São Paulo",
+      "state": "SP",
+      "zipCode": "01234-567",
+      "country": "Brasil"
+    }
   },
   {
     "id": "ORD-7783",
     "customerName": "Bruno Silva",
     "customerEmail": "bruno@exemplo.com",
+    "customerPhone": "+55 21 99876-5432",
     "amount": 89.90,
     "currency": "BRL",
     "status": "pending",
     "date": "2025-10-13T14:15:00Z",
-    "items": ["Camiseta Básica G"]
+    "items": ["Camiseta Básica G"],
+    "payment": {
+      "id": "PAY-7783-001",
+      "method": "Pix",
+      "installments": 1,
+      "amount": 89.90
+    },
+    "address": {
+      "street": "Avenida Atlântica",
+      "number": "456",
+      "neighborhood": "Copacabana",
+      "city": "Rio de Janeiro",
+      "state": "RJ",
+      "zipCode": "22070-000",
+      "country": "Brasil"
+    }
   },
   {
     "id": "ORD-7784",
     "customerName": "Carla Diaz",
     "customerEmail": "carla@exemplo.com",
+    "customerPhone": "+55 11 97654-3210",
     "amount": 1200.00,
     "currency": "BRL",
     "status": "refunded",
     "date": "2025-10-10T09:00:00Z",
-    "items": ["Casaco de Lã Premium"]
+    "items": ["Casaco de Lã Premium"],
+    "payment": {
+      "id": "PAY-7784-001",
+      "method": "Cartão de Crédito",
+      "installments": 3,
+      "amount": 1200.00
+    },
+    "address": {
+      "street": "Rua Augusta",
+      "number": "789",
+      "complement": "Loja 12",
+      "neighborhood": "Consolação",
+      "city": "São Paulo",
+      "state": "SP",
+      "zipCode": "01305-100",
+      "country": "Brasil"
+    },
+    "refund": {
+      "id": "REF-7784-001",
+      "status": "approved",
+      "amount": 1200.00,
+      "date": "2025-10-11T15:45:00Z"
+    }
+  },
+  {
+    "id": "ORD-7785",
+    "customerName": "Daniel Santos",
+    "customerEmail": "daniel@exemplo.com",
+    "customerPhone": "+55 31 98888-7777",
+    "amount": 450.50,
+    "currency": "BRL",
+    "status": "shipped",
+    "date": "2025-10-15T16:20:00Z",
+    "items": ["Tênis Esportivo 42", "Meia Esportiva (3 pares)"],
+    "payment": {
+      "id": "PAY-7785-001",
+      "method": "Cartão de Crédito",
+      "installments": 4,
+      "amount": 450.50
+    },
+    "address": {
+      "street": "Avenida do Contorno",
+      "number": "2500",
+      "neighborhood": "Savassi",
+      "city": "Belo Horizonte",
+      "state": "MG",
+      "zipCode": "30110-017",
+      "country": "Brasil"
+    },
+        "refund": {
+      "id": "REF-7785-001",
+      "status": "pending",
+      "amount": 450.50,
+      "date": "2025-10-16T10:00:00Z"
+    }
+  },
+  {
+    "id": "ORD-7786",
+    "customerName": "Elena Costa",
+    "customerEmail": "elena@exemplo.com",
+    "customerPhone": "+55 51 99999-1111",
+    "amount": 180.00,
+    "currency": "BRL",
+    "status": "delivered",
+    "date": "2025-10-08T11:45:00Z",
+    "items": ["Bolsa de Couro Sintético", "Carteira Feminina"],
+    "payment": {
+      "id": "PAY-7786-001",
+      "method": "Boleto",
+      "installments": 1,
+      "amount": 180.00
+    },
+    "address": {
+      "street": "Rua dos Andradas",
+      "number": "1234",
+      "neighborhood": "Centro Histórico",
+      "city": "Porto Alegre",
+      "state": "RS",
+      "zipCode": "90020-015",
+      "country": "Brasil"
+    }
+  },
+  {
+    "id": "ORD-7787",
+    "customerName": "Fernando Lima",
+    "customerEmail": "fernando@exemplo.com",
+    "customerPhone": "+55 85 97777-6666",
+    "amount": 320.00,
+    "currency": "BRL",
+    "status": "paid",
+    "date": "2025-10-14T08:30:00Z",
+    "items": ["Camisa Social Branca M", "Gravata Azul Marinho"],
+    "payment": {
+      "id": "PAY-7787-001",
+      "method": "Pix",
+      "installments": 1,
+      "amount": 320.00
+    },
+    "address": {
+      "street": "Avenida Beira Mar",
+      "number": "3500",
+      "neighborhood": "Meireles",
+      "city": "Fortaleza",
+      "state": "CE",
+      "zipCode": "60165-121",
+      "country": "Brasil"
+    }
+  },
+  {
+    "id": "ORD-7788",
+    "customerName": "Gabriela Rodrigues",
+    "customerEmail": "gabriela@exemplo.com",
+    "customerPhone": "+55 71 96666-5555",
+    "amount": 550.00,
+    "currency": "BRL",
+    "status": "cancelled",
+    "date": "2025-10-11T13:00:00Z",
+    "items": ["Vestido de Festa G", "Sapato Salto Alto 37"],
+    "payment": {
+      "id": "PAY-7788-001",
+      "method": "Cartão de Crédito",
+      "installments": 5,
+      "amount": 550.00
+    },
+    "address": {
+      "street": "Rua Chile",
+      "number": "567",
+      "neighborhood": "Comércio",
+      "city": "Salvador",
+      "state": "BA",
+      "zipCode": "40020-000",
+      "country": "Brasil"
+    }
+  },
+  {
+    "id": "ORD-7789",
+    "customerName": "Hugo Almeida",
+    "customerEmail": "hugo@exemplo.com",
+    "customerPhone": "+55 41 95555-4444",
+    "amount": 799.90,
+    "currency": "BRL",
+    "status": "delivered",
+    "date": "2025-10-09T10:15:00Z",
+    "items": ["Jaqueta de Couro M", "Luvas de Couro"],
+    "payment": {
+      "id": "PAY-7789-001",
+      "method": "Cartão de Crédito",
+      "installments": 6,
+      "amount": 799.90
+    },
+    "address": {
+      "street": "Rua XV de Novembro",
+      "number": "890",
+      "neighborhood": "Centro",
+      "city": "Curitiba",
+      "state": "PR",
+      "zipCode": "80020-310",
+      "country": "Brasil"
+    }
   }
 ]
