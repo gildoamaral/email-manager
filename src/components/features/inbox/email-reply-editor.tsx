@@ -44,7 +44,7 @@ export function EmailReplyEditor({ email }: EmailProps) {
   };
 
   return (
-    <div className="p-4 bg-background">
+    <div className="p-4 bg-card">
       <div className="grid gap-4">
         <Textarea
           className="p-4 min-h-25"
