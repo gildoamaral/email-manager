@@ -7,7 +7,7 @@
     "amount": 250.0,
     "currency": "BRL",
     "status": "delivered",
-    "date": "2025-10-12T10:30:00Z",
+    "date": "2026-01-11T10:30:00Z",
     "items": ["Vestido Floral M", "Cinto de Couro"],
     "payment": {
       "id": "PAY-7782-001",
@@ -34,7 +34,7 @@
     "amount": 89.9,
     "currency": "BRL",
     "status": "pending",
-    "date": "2025-10-13T14:15:00Z",
+    "date": "2026-01-11T14:15:00Z",
     "items": ["Camiseta Básica G"],
     "payment": {
       "id": "PAY-7783-001",
@@ -60,7 +60,7 @@
     "amount": 1200.0,
     "currency": "BRL",
     "status": "refunded",
-    "date": "2025-10-10T09:00:00Z",
+    "date": "2026-01-08T09:00:00Z",
     "items": ["Casaco de Lã Premium"],
     "payment": {
       "id": "PAY-7784-001",
@@ -82,7 +82,7 @@
       "id": "REF-7784-001",
       "status": "approved",
       "amount": 1200.0,
-      "date": "2025-10-11T15:45:00Z"
+      "date": "2026-01-10T15:45:00Z"
     }
   },
   {
@@ -93,7 +93,7 @@
     "amount": 450.5,
     "currency": "BRL",
     "status": "shipped",
-    "date": "2025-10-15T16:20:00Z",
+    "date": "2026-01-12T16:20:00Z",
     "items": ["Tênis Esportivo 42", "Meia Esportiva (3 pares)"],
     "payment": {
       "id": "PAY-7785-001",
@@ -109,12 +109,6 @@
       "state": "MG",
       "zipCode": "30110-017",
       "country": "Brasil"
-    },
-    "refund": {
-      "id": "REF-7785-001",
-      "status": "pending",
-      "amount": 450.5,
-      "date": "2025-10-16T10:00:00Z"
     }
   },
   {
@@ -125,7 +119,7 @@
     "amount": 180.0,
     "currency": "BRL",
     "status": "delivered",
-    "date": "2025-10-08T11:45:00Z",
+    "date": "2026-01-06T11:45:00Z",
     "items": ["Bolsa de Couro Sintético", "Carteira Feminina"],
     "payment": {
       "id": "PAY-7786-001",
@@ -151,7 +145,7 @@
     "amount": 320.0,
     "currency": "BRL",
     "status": "paid",
-    "date": "2025-10-14T08:30:00Z",
+    "date": "2026-01-09T08:30:00Z",
     "items": ["Camisa Social Branca M", "Gravata Azul Marinho"],
     "payment": {
       "id": "PAY-7787-001",
@@ -177,7 +171,7 @@
     "amount": 550.0,
     "currency": "BRL",
     "status": "cancelled",
-    "date": "2025-10-11T13:00:00Z",
+    "date": "2026-01-07T13:00:00Z",
     "items": ["Vestido de Festa G", "Sapato Salto Alto 37"],
     "payment": {
       "id": "PAY-7788-001",
@@ -203,7 +197,7 @@
     "amount": 799.9,
     "currency": "BRL",
     "status": "delivered",
-    "date": "2025-10-09T10:15:00Z",
+    "date": "2026-01-05T10:15:00Z",
     "items": ["Jaqueta de Couro M", "Luvas de Couro"],
     "payment": {
       "id": "PAY-7789-001",
@@ -229,7 +223,7 @@
     "amount": 340.0,
     "currency": "BRL",
     "status": "paid",
-    "date": "2025-10-16T11:30:00Z",
+    "date": "2026-01-13T11:30:00Z",
     "items": ["Calça Jeans Skinny M", "Blusa Manga Longa M"],
     "payment": {
       "id": "PAY-7790-001",
@@ -256,7 +250,7 @@
     "amount": 680.0,
     "currency": "BRL",
     "status": "refunded",
-    "date": "2025-10-05T13:20:00Z",
+    "date": "2026-01-03T13:20:00Z",
     "items": ["Conjunto de Inverno G", "Cachecol de Lã"],
     "payment": {
       "id": "PAY-7791-001",
@@ -277,7 +271,33 @@
       "id": "REF-7791-001",
       "status": "approved",
       "amount": 680.0,
-      "date": "2025-10-07T14:30:00Z"
+      "date": "2026-01-05T14:30:00Z"
+    }
+  },
+  {
+    "id": "ORD-7794",
+    "customerName": "Roberto Mendes",
+    "customerEmail": "roberto.mendes@email.com",
+    "customerPhone": "+55 11 92222-1111",
+    "amount": 420.0,
+    "currency": "BRL",
+    "status": "delivered",
+    "date": "2026-01-10T09:00:00Z",
+    "items": ["Polo Premium M", "Bermuda Sarja"],
+    "payment": {
+      "id": "PAY-7794-001",
+      "method": "Cartão de Crédito",
+      "installments": 2,
+      "amount": 420.0
+    },
+    "address": {
+      "street": "Rua Oscar Freire",
+      "number": "1200",
+      "neighborhood": "Jardins",
+      "city": "São Paulo",
+      "state": "SP",
+      "zipCode": "01426-001",
+      "country": "Brasil"
     }
   }
 ]

@@ -4,7 +4,7 @@ import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import { MoreVertical, Trash2 } from "lucide-react";
 
-import { Email } from "@/types";
+import { EmailProps } from "@/types";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -15,11 +15,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-interface EmailHeaderProps {
-  email: Email;
-}
 
-export function EmailHeader({ email }: EmailHeaderProps) {
+export function EmailHeader({ email }: EmailProps) {
   return (
     <div className="flex items-start justify-between p-4 border-b">
       <div className="flex items-start gap-4 text-sm">

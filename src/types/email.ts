@@ -19,3 +19,31 @@ export interface EmailThread {
   date: string;
   originalLanguage?: 'en' | 'pt'; // Para a feature de tradução
 }
+
+export interface EmailProps {
+  email: Email;
+}
+
+export interface EmailMessage {
+  id: string;
+  from: "customer" | "support";
+  content: string;
+  date: string;
+  originalLanguage?: string;
+}
+
+export interface EmailMessageBubbleProps {
+  message: EmailMessage;
+  senderName: string;
+}
+
+export interface EmailListProps {
+  items: Email[];
+  selectedId: string | null;
+  onSelect: (id: string) => void;
+}
+
+export interface EmailDisplayProps {
+  email: Email | null;
+  onBack?: () => void;
+}

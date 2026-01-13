@@ -34,3 +34,7 @@ export interface Payment {
   installments: number;
   amount: number;
 }
+
+export interface OrderProps {
+  orders: Order[];
+}

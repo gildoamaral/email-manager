@@ -5,19 +5,8 @@ import { format } from "date-fns";
 import { Languages } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { EmailMessageBubbleProps } from '@/types';
 
-interface EmailMessage {
-  id: string;
-  from: "customer" | "support";
-  content: string;
-  date: string;
-  originalLanguage?: string;
-}
-
-interface EmailMessageBubbleProps {
-  message: EmailMessage;
-  senderName: string;
-}
 
 export function EmailMessageBubble({ message, senderName }: EmailMessageBubbleProps) {
   const [showTranslated, setShowTranslated] = useState(false);

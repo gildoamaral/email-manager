@@ -3,17 +3,15 @@
 import { useState } from "react";
 import { Send, Languages, Loader2, X } from "lucide-react";
 
-import { Email } from "@/types";
+import { EmailProps } from "@/types";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useStore } from "@/store/use-store";
 import { toast } from "sonner";
 
-interface EmailReplyEditorProps {
-  email: Email;
-}
 
-export function EmailReplyEditor({ email }: EmailReplyEditorProps) {
+
+export function EmailReplyEditor({ email }: EmailProps) {
   const { addReply } = useStore();
   const [replyText, setReplyText] = useState("");
   const [isTranslating, setIsTranslating] = useState(false);

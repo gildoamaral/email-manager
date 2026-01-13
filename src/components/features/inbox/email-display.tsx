@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
-import { Email } from "@/types";
+import { EmailDisplayProps } from "@/types";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { useStore } from "@/store/use-store";
@@ -10,10 +10,7 @@ import { EmailHeader } from "./email-header";
 import { EmailThread } from "./email-thread";
 import { EmailReplyEditor } from "./email-reply-editor";
 
-interface EmailDisplayProps {
-  email: Email | null;
-  onBack?: () => void;
-}
+
 
 export function EmailDisplay({ email, onBack }: EmailDisplayProps) {
   const { markEmailAsRead } = useStore();

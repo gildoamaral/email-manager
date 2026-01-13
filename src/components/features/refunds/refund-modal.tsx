@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
 import { Loader2, AlertTriangle } from "lucide-react";
 import { toast } from "sonner";
 
@@ -36,15 +35,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 
 import { Order } from "@/types";
-
-// Schema de validação
-const refundSchema = z.object({
-  reason: z.string().min(1, "Por favor selecione um motivo."),
-  items: z.array(z.string()).refine((value) => value.length > 0, {
-    message: "Selecione pelo menos um item para reembolso.",
-  }),
-  notes: z.string().optional(),
-});
+import { RefundFormData, refundSchema } from '@/schemas';
 
 interface RefundModalProps {
   order: Order;
@@ -53,7 +44,7 @@ interface RefundModalProps {
 export function RefundModal({ order }: RefundModalProps) {
   const [open, setOpen] = useState(false);
 
-  const form = useForm<z.infer<typeof refundSchema>>({
+  const form = useForm<RefundFormData>({
     resolver: zodResolver(refundSchema),
     defaultValues: {
       items: [], // Começa vazio
@@ -63,7 +54,7 @@ export function RefundModal({ order }: RefundModalProps) {
 
   const isSubmitting = form.formState.isSubmitting;
 
-  async function onSubmit(values: z.infer<typeof refundSchema>) {
+  async function onSubmit(values: RefundFormData) {
     // Simulação de delay de API
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
@@ -144,7 +135,7 @@ export function RefundModal({ order }: RefundModalProps) {
                                       ? field.onChange([...field.value, item])
                                       : field.onChange(
                                         field.value?.filter(
-                                          (value) => value !== item
+                                          (value: string) => value !== item
                                         )
                                       );
                                   }}

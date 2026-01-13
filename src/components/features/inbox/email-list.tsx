@@ -2,16 +2,15 @@ import { formatDistanceToNow } from "date-fns"; // Vamos instalar isso rapidinho
 import { ptBR } from "date-fns/locale";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
-import { ScrollArea } from "@/components/ui/scroll-area"; // Componente nativo do Shadcn/Radix
-import { Email } from "@/types";
+import { EmailListProps } from "@/types";
 
-interface EmailListProps {
-  items: Email[];
-  selectedId: string | null;
-  onSelect: (id: string) => void;
-}
+
 
 export function EmailList({ items, selectedId, onSelect }: EmailListProps) {
+  const sortedItems = [...items].sort((a, b) => 
+    new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
   return (
     <div className="w-full h-full flex flex-col">
       <div className="p-4 border-b font-semibold text-sm text-muted-foreground shrink-0">
@@ -19,7 +18,7 @@ export function EmailList({ items, selectedId, onSelect }: EmailListProps) {
       </div>
       <div className="flex-1 overflow-y-auto"> 
         <div className="flex flex-col gap-2 p-4">
-          {items.map((item) => (
+          {sortedItems.map((item) => (
             <button
               key={item.id}
               onClick={() => onSelect(item.id)}
