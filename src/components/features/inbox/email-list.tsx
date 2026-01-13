@@ -1,10 +1,8 @@
-import { formatDistanceToNow } from "date-fns"; // Vamos instalar isso rapidinho depois
+import { formatDistanceToNow } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { EmailListProps } from "@/types";
-
-
 
 export function EmailList({ items, selectedId, onSelect }: EmailListProps) {
   const sortedItems = [...items].sort((a, b) => 

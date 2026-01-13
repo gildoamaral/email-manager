@@ -34,7 +34,7 @@ export function EmailDisplay({ email, onBack }: EmailDisplayProps) {
     <div className="flex h-full flex-col overflow-hidden">
       {/* Botão Voltar (apenas mobile) */}
       {onBack && (
-        <div className="md:hidden p-2 border-b flex-shrink-0">
+        <div className="md:hidden p-2 border-b shrink-0">
           <Button 
             variant="ghost" 
             size="sm" 
@@ -46,12 +46,12 @@ export function EmailDisplay({ email, onBack }: EmailDisplayProps) {
           </Button>
         </div>
       )}
-      <div className="flex-shrink-0">
+      <div className="shrink-0">
         <EmailHeader email={email} />
       </div>
       <EmailThread email={email} />
-      <Separator className="flex-shrink-0" />
-      <div className="flex-shrink-0">
+      <Separator className="shrink-0" />
+      <div className="shrink-0">
         <EmailReplyEditor email={email} />
       </div>
     </div>

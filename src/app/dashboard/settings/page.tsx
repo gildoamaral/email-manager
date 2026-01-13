@@ -56,7 +56,6 @@ export default function SettingsPage() {
     
     // Simula uma chamada de API
     setTimeout(() => {
-      console.log("Configurações salvas:", data);
       setIsSaving(false);
       toast.success("Configurações atualizadas com sucesso!", {
         description: "O sistema agora utilizará as novas credenciais de envio."

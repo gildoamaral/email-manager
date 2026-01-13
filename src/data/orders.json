@@ -109,6 +109,12 @@
       "state": "MG",
       "zipCode": "30110-017",
       "country": "Brasil"
+    },
+    "refund": {
+      "id": "REF-7785-001",
+      "status": "pending",
+      "amount": 450.5,
+      "date": "2026-01-13T10:00:00Z"
     }
   },
   {
