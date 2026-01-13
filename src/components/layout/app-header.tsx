@@ -31,9 +31,7 @@ export function AppHeader() {
 
   return (
     <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-15 lg:px-6 justify-between">
-      {/* Lado Esquerdo: Menu Mobile + Título */}
       <div className="flex items-center gap-4">
-        {/* Menu Hambúrguer - Apenas Mobile */}
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="md:hidden">
@@ -53,8 +51,8 @@ export function AppHeader() {
             <nav className="grid gap-2 mt-6">
               {menuItems.map((item) => {
                 const Icon = item.icon;
-                const isActive = item.href === "/dashboard" 
-                  ? pathname === "/dashboard" 
+                const isActive = item.href === "/dashboard"
+                  ? pathname === "/dashboard"
                   : pathname.startsWith(item.href);
 
                 return (
@@ -83,16 +81,20 @@ export function AppHeader() {
 
       </div>
 
-      {/* Lado Direito: Ações e Perfil */}
       <div className="flex items-center gap-2 sm:gap-4">
         <div className="hidden sm:flex">
           <ThemeToggle />
         </div>
         <Separator orientation="vertical" className="h-6 hidden sm:block" />
         <div className="flex items-center gap-2">
-          <span className="text-sm font-medium hidden sm:inline-block">
-            Admin User
-          </span>
+          <div className="flex flex-col leading-tight">
+            <span className="text-sm font-medium hidden sm:inline-block">
+              Admin User
+            </span>
+            <span className=" font-light text-xs hidden sm:inline-block">
+              user@admin.com
+            </span>
+          </div>
           <Avatar className="h-8 w-8">
             <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
             <AvatarFallback>AD</AvatarFallback>

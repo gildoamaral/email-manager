@@ -29,11 +29,9 @@ export default function OrderDetailsPage() {
 
   return (
     <div className="flex flex-col gap-4 md:gap-6 max-w-5xl mx-auto w-full px-4 sm:px-6">
-      {/* Header com Navegação */}
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
         <OrderHeader order={order} />
         
-        {/* Ação Principal: Refund */}
         <div className="w-full sm:w-auto">
           {!isRefunded ? (
             <RefundModal order={order} />
@@ -46,13 +44,11 @@ export default function OrderDetailsPage() {
       </div>
 
       <div className="grid gap-4 md:gap-6 md:grid-cols-3">
-        {/* Coluna Principal: Detalhes e Itens */}
         <div className="md:col-span-2 space-y-4 md:space-y-6">
           <OrderItemsCard order={order} />
           <OrderEmailsCard emails={relatedEmails} />
         </div>
 
-        {/* Sidebar Direita: Cliente e Pagamento */}
         <div className="space-y-4 md:space-y-6">
           <OrderCustomerCard order={order} />
           <OrderPaymentCard order={order} />

@@ -9,13 +9,10 @@ import { EmailDisplay } from "@/components/features/inbox/email-display";
 export default function InboxPage() {
   const { emails } = useStore();
   
-  // Estado local para saber qual e-mail está selecionado na tela dividida
-  // Por padrão, selecionamos o primeiro da lista, se existir
   const [selectedId, setSelectedId] = useState<string | null>(
     emails.length > 0 ? emails[0].id : null
   );
   
-  // Estado para controlar visualização no mobile
   const [isViewingEmail, setIsViewingEmail] = useState(false);
 
   const selectedEmail = emails.find((e) => e.id === selectedId) || null;
@@ -32,7 +29,6 @@ export default function InboxPage() {
   return (
     <div className="flex flex-col md:flex-row h-[calc(100vh-140px)] border rounded-lg overflow-hidden bg-background shadow-sm">
       
-      {/* Coluna da Esquerda: Lista */}
       <div className={cn(
         "w-full md:w-[320px] border-b md:border-b-0 md:border-r bg-muted/10 overflow-hidden",
         isViewingEmail ? "hidden md:block" : "flex flex-col"
@@ -44,7 +40,6 @@ export default function InboxPage() {
         />
       </div>
 
-      {/* Coluna da Direita: Visualização */}
       <div className={cn(
         "flex-1 bg-background overflow-hidden",
         isViewingEmail ? "flex flex-col" : "hidden md:flex md:flex-col"
