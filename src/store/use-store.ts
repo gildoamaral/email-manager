@@ -39,7 +39,7 @@ export const useStore = create<AppState>((set, get) => ({
         thread: [
           ...email.thread,
           {
-            id: crypto.randomUUID(), // ID temporário
+            id: Math.random().toString(36).substr(2, 9), // ID temporário
             from: 'support',
             content,
             date: new Date().toISOString(),
