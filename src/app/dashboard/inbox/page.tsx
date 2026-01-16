@@ -27,10 +27,10 @@ export default function InboxPage() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row h-[calc(100vh-140px)] border rounded-lg overflow-hidden bg-card shadow-sm">
+    <div className="flex flex-col md:flex-row h-[calc(100vh-140px)] border rounded-lg overflow-hidden bg-muted/20 shadow-sm ">
       
       <div className={cn(
-        "w-full md:w-[320px] border-b md:border-b-0 md:border-r bg-muted/30 overflow-hidden",
+        "w-full md:w-[320px] border-b md:border-b-0 md:border-r dark:bg-muted/30 overflow-hidden",
         isViewingEmail ? "hidden md:block" : "flex flex-col"
       )}>
         <EmailList 
@@ -41,7 +41,7 @@ export default function InboxPage() {
       </div>
 
       <div className={cn(
-        "flex-1 bg-card overflow-hidden",
+        "flex-1 dark:bg-card overflow-hidden",
         isViewingEmail ? "flex flex-col" : "hidden md:flex md:flex-col"
       )}>
         <EmailDisplay 

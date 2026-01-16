@@ -31,6 +31,12 @@ export function AppHeader() {
 
   return (
     <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-15 lg:px-6 justify-between">
+      <div className="flex h-14 items-center border-b px-4 lg:h-15 lg:px-6">
+        <Link href="/dashboard" className="flex items-center gap-2 font-semibold">
+          <Package2 className="h-6 w-6" />
+          <span>Mail Manager</span>
+        </Link>
+      </div>
       <div className="flex items-center gap-4">
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>

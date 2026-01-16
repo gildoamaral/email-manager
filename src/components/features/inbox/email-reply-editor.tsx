@@ -23,7 +23,6 @@ export function EmailReplyEditor({ email }: EmailProps) {
     setIsTranslating(true);
     setTranslatedText("");
 
-    // Simulação de tradução com delay de 1 segundo
     setTimeout(() => {
       const mockEnglishTranslation = `(Translated to EN): ${replyText}`;
       setTranslatedText(mockEnglishTranslation);
@@ -34,7 +33,6 @@ export function EmailReplyEditor({ email }: EmailProps) {
   const handleSendReply = () => {
     if (!replyText.trim()) return;
 
-    // Envia a versão traduzida se existir, caso contrário envia o original
     const textToSend = translatedText.trim() || replyText;
     
     addReply(email.id, textToSend);
@@ -44,15 +42,15 @@ export function EmailReplyEditor({ email }: EmailProps) {
   };
 
   return (
-    <div className="p-4 bg-card">
-      <div className="grid gap-4">
+    <div className="p-4 dark:bg-card">
+      <div className="grid gap-3">
         <Textarea
-          className="p-4 min-h-25"
+          className="min-h-15 bg-card"
           placeholder="Digite sua resposta em português..."
           value={replyText}
           onChange={(e) => {
             setReplyText(e.target.value);
-            setTranslatedText(""); // Limpa a tradução ao editar
+            setTranslatedText(""); 
           }}
         />
 

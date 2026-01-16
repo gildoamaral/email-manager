@@ -67,7 +67,7 @@ export function SmtpSettingsCard() {
       <Separator />
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
-          <CardContent className="space-y-6 pt-6">
+          <CardContent className="space-y-6 py-6">
             
             <FormField
               control={form.control}

@@ -86,6 +86,7 @@ export function RefundsTable({ orders }: RefundsTableProps) {
                 size="icon"
                 onClick={() => router.push(`/dashboard/orders/${order.id}`)}
                 title="Ver detalhes do pedido"
+                className='cursor-pointer'
               >
                 <ExternalLink className="h-4 w-4" />
                 <span className="sr-only">Ver pedido</span>

@@ -25,12 +25,12 @@ export function RecentEmails({ emails }: {emails: Email[]}) {
       <CardHeader>
         <CardTitle className="text-base md:text-lg">E-mails Recentes</CardTitle>
       </CardHeader>
-      <CardContent className="p-0">
+      <CardContent className="px-6">
         <div className="divide-y divide-border">
           {emails.map((email) => (
             <div 
               key={email.id} 
-              className="flex items-center justify-between gap-4 px-6 py-4 hover:bg-muted/50 transition-colors"
+              className="flex items-center justify-between gap-4 py-3 px-2 hover:bg-muted/50 transition-colors"
             >
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-1">

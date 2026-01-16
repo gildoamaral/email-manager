@@ -18,11 +18,10 @@ export function EmailMessageBubble({ message, senderName }: EmailMessageBubblePr
       <div
         className={`max-w-[80%] rounded-lg p-4 text-sm ${
           isCustomer
-            ? "bg-muted text-foreground"
+            ? "bg-muted/23 text-foreground"
             : "bg-blue-600 text-white dark:bg-blue-900"
         }`}
       >
-        {/* Cabeçalho da bolha */}
         <div className="flex items-center justify-between mb-2 gap-4">
           <span className="font-bold text-xs opacity-70">
             {isCustomer ? senderName : "Suporte (Você)"}

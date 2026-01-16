@@ -28,7 +28,7 @@ export default function OrderDetailsPage() {
   const isRefunded = order.status === "refunded";
 
   return (
-    <div className="flex flex-col gap-4 md:gap-6 max-w-5xl mx-auto w-full px-4 sm:px-6">
+    <div className="flex flex-col gap-4 md:gap-6 mx-auto w-full px-4 sm:px-6">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
         <OrderHeader order={order} />
         

@@ -18,7 +18,7 @@ export default function DashboardPage() {
     .slice(0, 5);
 
   return (
-    <div className="flex flex-col gap-4 md:gap-6">
+    <div className="flex flex-col gap-4 md:gap-6 w-full">
       <div className="flex items-center">
         <h1 className="text-xl font-semibold md:text-2xl">Dashboard</h1>
       </div>

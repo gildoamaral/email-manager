@@ -125,7 +125,7 @@ export function OrdersTable({ orders, sortField, sortOrder, onSort }: OrdersTabl
                 <Button 
                   variant="ghost" 
                   size="icon"
-                  className="h-8 w-8"
+                  className="h-8 w-8 cursor-pointer"
                   onClick={() => router.push(`/dashboard/orders/${order.id}`)}
                 >
                   <Eye className="h-4 w-4" />

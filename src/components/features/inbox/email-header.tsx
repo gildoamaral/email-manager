@@ -1,8 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
-import { MoreVertical, Trash2 } from "lucide-react";
+import { MoreVertical, Trash2, ChevronDown } from "lucide-react";
 
 import { EmailProps } from "@/types";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -17,19 +18,33 @@ import {
 
 
 export function EmailHeader({ email }: EmailProps) {
+  const [expanded, setExpanded] = useState(false);
   return (
-    <div className="flex items-start justify-between p-4 border-b">
-      <div className="flex items-start gap-4 text-sm">
+    <div className="flex items-start justify-between px-4 py-2 border-b">
+      <div className="flex gap-4 text-sm">
         <Avatar>
           <AvatarImage alt={email.senderName} />
           <AvatarFallback>{email.senderName[0]}</AvatarFallback>
         </Avatar>
-        <div className="grid gap-1">
-          <div className="font-semibold">{email.senderName}</div>
-          <div className="line-clamp-1 text-xs">{email.subject}</div>
-          <div className="line-clamp-1 text-xs text-muted-foreground">
-            <span className="font-medium">Reply-To:</span> {email.senderEmail}
+        <div className="grid gap-1 ">
+          <div className="flex items-center gap-2 cursor-pointer" onClick={() => setExpanded(!expanded)}>
+            <span className="font-semibold">{email.senderName}</span>
+            <button
+              onClick={() => setExpanded(!expanded)}
+              className="p-0 h-4 w-4 flex items-center cursor-pointer justify-center hover:text-foreground/70 transition-transform"
+              style={{ transform: expanded ? "rotate(180deg)" : "rotate(0deg)" }}
+            >
+              <ChevronDown className="h-4 w-4" />
+            </button>
           </div>
+          {expanded && (
+            <>
+              <div className="line-clamp-1 text-xs">{email.subject}</div>
+              <div className="line-clamp-1 text-xs text-muted-foreground">
+                <span className="font-medium">Reply-To:</span> {email.senderEmail}
+              </div>
+            </>
+          )}
         </div>
       </div>
 

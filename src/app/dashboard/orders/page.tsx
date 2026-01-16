@@ -50,7 +50,7 @@ export default function OrdersPage() {
   }, [orders, sortField, sortOrder, statusFilter]);
 
   return (
-    <div className="flex flex-col gap-4 md:gap-6">
+    <div className="flex flex-col gap-4 md:gap-6 w-full">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <h1 className="text-xl font-semibold md:text-2xl">Pedidos</h1>
         <OrdersFilters statusFilter={statusFilter} onStatusChange={setStatusFilter} />
@@ -62,7 +62,7 @@ export default function OrdersPage() {
             Todos os Pedidos ({filteredAndSortedOrders.length})
           </CardTitle>
         </CardHeader>
-        <CardContent className="p-0 sm:p-6">
+        <CardContent className="p-0 sm:px-6">
           <OrdersTable 
             orders={filteredAndSortedOrders}
             sortField={sortField}

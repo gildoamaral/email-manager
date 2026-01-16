@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
+import { Separator } from '@/components/ui/separator';
 
 export function StoreSettingsCard() {
   return (
@@ -21,6 +22,7 @@ export function StoreSettingsCard() {
           Informações sobre sua loja conectada à Shopify
         </CardDescription>
       </CardHeader>
+      <Separator />
       <CardContent className="space-y-4">
         <div className="grid gap-2">
           <Label htmlFor="storeName">Nome da Loja</Label>
@@ -28,7 +30,7 @@ export function StoreSettingsCard() {
             id="storeName" 
             defaultValue="Minha Loja Shopify" 
             readOnly 
-            className="bg-muted text-muted-foreground" 
+            className="bg-muted/40 text-muted-foreground" 
           />
         </div>
         
@@ -38,7 +40,7 @@ export function StoreSettingsCard() {
             id="storeUrl" 
             defaultValue="minhaloja.myshopify.com" 
             readOnly 
-            className="bg-muted text-muted-foreground" 
+            className="bg-muted/40 text-muted-foreground" 
           />
         </div>
 
