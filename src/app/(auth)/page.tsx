@@ -63,8 +63,8 @@ export default function LoginPage() {
   }
 
   return (
-    <Card className="border-none shadow-xl">
-      <CardHeader className="space-y-1 text-center">
+    <Card className="border-none shadow-xl h-[calc(80vh)] sm:h-auto py-10">
+      <CardHeader className="space-y-1 text-center mb-4">
         <div className="flex justify-center mb-4">
           <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10">
             <Package2 className="h-6 w-6 text-primary" />

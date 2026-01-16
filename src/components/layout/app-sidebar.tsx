@@ -17,7 +17,7 @@ export function AppSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-64 border-r bg-muted/40 hidden md:block min-h-screen">
+    <aside className="w-64 border-r bg-muted/40 hidden md:block sticky top-0 h-screen overflow-y-auto">
 
       <nav className="grid items-start px-2 text-sm font-medium lg:px-4 mt-4">
         {menuItems.map((item) => {

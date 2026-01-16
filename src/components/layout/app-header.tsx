@@ -31,12 +31,7 @@ export function AppHeader() {
 
   return (
     <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-15 lg:px-6 justify-between">
-      <div className="flex h-14 items-center border-b px-4 lg:h-15 lg:px-6">
-        <Link href="/dashboard" className="flex items-center gap-2 font-semibold">
-          <Package2 className="h-6 w-6" />
-          <span>Mail Manager</span>
-        </Link>
-      </div>
+
       <div className="flex items-center gap-4">
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
@@ -45,15 +40,24 @@ export function AppHeader() {
               <span className="sr-only">Abrir menu</span>
             </Button>
           </SheetTrigger>
+
+          <div className="hidden sm:flex h-14 items-center border-bpx-4 lg:h-15 lg:px-6">
+            <Link href="/dashboard" className="flex items-center gap-2 font-semibold">
+              <Package2 className="h-6 w-6" />
+              <span>Mail Manager</span>
+            </Link>
+          </div>
+
           <SheetContent side="left" className="w-64">
             <SheetHeader>
               <SheetTitle>
                 <Link href="/dashboard" className="flex items-center gap-2 font-semibold" onClick={() => setOpen(false)}>
                   <Package2 className="h-6 w-6" />
-                  <span>Email Manager</span>
+                  <span>Mail Manager</span>
                 </Link>
               </SheetTitle>
             </SheetHeader>
+
             <nav className="grid gap-2 mt-6">
               {menuItems.map((item) => {
                 const Icon = item.icon;
@@ -91,13 +95,12 @@ export function AppHeader() {
         <div className="hidden sm:flex">
           <ThemeToggle />
         </div>
-        <Separator orientation="vertical" className="h-6 hidden sm:block" />
         <div className="flex items-center gap-2">
           <div className="flex flex-col leading-tight">
-            <span className="text-sm font-medium hidden sm:inline-block">
+            <span className="text-sm font-medium sm:inline-block">
               Admin User
             </span>
-            <span className=" font-light text-xs hidden sm:inline-block">
+            <span className=" font-light text-xs sm:inline-block">
               user@admin.com
             </span>
           </div>

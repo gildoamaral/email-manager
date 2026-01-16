@@ -8,11 +8,11 @@ export default function DashboardLayout({
 }) {
   return (
     <div className="flex min-h-screen w-full flex-col">
-        <AppHeader />
+      <AppHeader />
 
       <div className="flex flex-1 flex-col md:flex-row min-w-0">
-        
-      <AppSidebar />
+
+        <AppSidebar />
         <main className="flex flex-1 flex-row gap-4 p-4 lg:gap-6 lg:p-6 bg-muted/10">
           {children}
         </main>

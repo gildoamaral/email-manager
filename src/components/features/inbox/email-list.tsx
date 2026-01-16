@@ -21,7 +21,7 @@ export function EmailList({ items, selectedId, onSelect }: EmailListProps) {
               key={item.id}
               onClick={() => onSelect(item.id)}
               className={cn(
-                "flex flex-col items-start gap-2 rounded-lg border p-3 text-left text-sm transition-all hover:bg-accent",
+                "flex flex-col cursor-pointer items-start gap-2 rounded-lg border p-3 text-left text-sm transition-all hover:bg-accent",
                 selectedId === item.id ? "bg-accent border-primary/50" : "bg-card"
               )}
             >

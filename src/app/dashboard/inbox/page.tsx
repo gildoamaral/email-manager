@@ -27,7 +27,7 @@ export default function InboxPage() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row h-[calc(100vh-140px)] border rounded-lg overflow-hidden bg-muted/20 shadow-sm ">
+    <div className="flex flex-col md:flex-row h-[calc(80vh)] border rounded-lg overflow-hidden bg-muted/20 shadow-sm w-full">
       
       <div className={cn(
         "w-full md:w-[320px] border-b md:border-b-0 md:border-r dark:bg-muted/30 overflow-hidden",

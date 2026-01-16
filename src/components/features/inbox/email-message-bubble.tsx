@@ -18,7 +18,7 @@ export function EmailMessageBubble({ message, senderName }: EmailMessageBubblePr
       <div
         className={`max-w-[80%] rounded-lg p-4 text-sm ${
           isCustomer
-            ? "bg-muted/23 text-foreground"
+            ? "bg-muted/23 dark:bg-muted text-foreground"
             : "bg-blue-600 text-white dark:bg-blue-900"
         }`}
       >

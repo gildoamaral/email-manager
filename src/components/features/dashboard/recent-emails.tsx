@@ -25,7 +25,7 @@ export function RecentEmails({ emails }: {emails: Email[]}) {
       <CardHeader>
         <CardTitle className="text-base md:text-lg">E-mails Recentes</CardTitle>
       </CardHeader>
-      <CardContent className="px-6">
+      <CardContent className="sm:px-6 px-0">
         <div className="divide-y divide-border">
           {emails.map((email) => (
             <div 
