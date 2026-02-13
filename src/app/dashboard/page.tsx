@@ -2,6 +2,8 @@
 
 import { useStore } from "@/store/use-store";
 import { StatsCards, RecentOrders, RecentEmails } from "@/components/features/dashboard";
+import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from "recharts";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function DashboardPage() {
   const { emails, orders } = useStore();
@@ -17,11 +19,47 @@ export default function DashboardPage() {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 5);
 
+  const chartData = [
+    { name: "E-mails Pendentes", value: pendingEmails, color: "#3b82f6" },
+    { name: "Refunds do Mês", value: monthlyRefunds, color: "#ef4444" },
+    { name: "Total de Pedidos", value: orders.length, color: "#10b981" },
+  ];
+
   return (
     <div className="flex flex-col gap-4 md:gap-6 w-full">
       <div className="flex items-center">
         <h1 className="text-xl font-semibold md:text-2xl">Dashboard</h1>
       </div>
+
+      {/* Gráfico de Pizza */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Visão Geral</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <ResponsiveContainer width="100%" height={300}>
+            <PieChart>
+              <Pie
+                data={chartData}
+                cx="50%"
+                cy="50%"
+                labelLine={false}
+                label={({ name, percent = 0 }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                outerRadius={80}
+                fill="#8884d8"
+                dataKey="value"
+                style={{ outline: 'none' }}
+              >
+                {chartData.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={entry.color} />
+                ))}
+              </Pie>
+              <Tooltip />
+              <Legend />
+            </PieChart>
+          </ResponsiveContainer>
+        </CardContent>
+      </Card>
 
       {/* Cards de Resumo (KPIs) */}
       <StatsCards 
