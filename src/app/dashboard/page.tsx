@@ -20,9 +20,9 @@ export default function DashboardPage() {
     .slice(0, 5);
 
   const chartData = [
-    { name: "E-mails Pendentes", value: pendingEmails, color: "#3b82f6" },
-    { name: "Refunds do Mês", value: monthlyRefunds, color: "#ef4444" },
-    { name: "Total de Pedidos", value: orders.length, color: "#10b981" },
+    { name: "E-mails Pendentes", shortName: "E-mails", value: pendingEmails, color: "#3b82f6" },
+    { name: "Refunds do Mês", shortName: "Refunds", value: monthlyRefunds, color: "#ef4444" },
+    { name: "Total de Pedidos", shortName: "Pedidos", value: orders.length, color: "#10b981" },
   ];
 
   return (
@@ -37,14 +37,15 @@ export default function DashboardPage() {
           <CardTitle>Visão Geral</CardTitle>
         </CardHeader>
         <CardContent>
-          <ResponsiveContainer width="100%" height={300}>
+
+          <ResponsiveContainer width="100%"  height={300} >
             <PieChart>
               <Pie
                 data={chartData}
                 cx="50%"
                 cy="50%"
                 labelLine={false}
-                label={({ name, percent = 0 }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                label={({ payload, percent = 0 }) => `${payload?.shortName}: ${(percent * 100).toFixed(0)}%`}
                 outerRadius={80}
                 fill="#8884d8"
                 dataKey="value"
@@ -54,10 +55,11 @@ export default function DashboardPage() {
                   <Cell key={`cell-${index}`} fill={entry.color} />
                 ))}
               </Pie>
-              <Tooltip />
+              <Tooltip isAnimationActive={false}/>
               <Legend />
             </PieChart>
           </ResponsiveContainer>
+          
         </CardContent>
       </Card>
 
